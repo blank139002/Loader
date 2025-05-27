@@ -1,0 +1,235 @@
+--[=[
+ d888b  db    db d888888b      .d888b.      db      db    db  .d8b.  
+88' Y8b 88    88   `88'        VP  `8D      88      88    88 d8' `8b 
+88      88    88    88            odD'      88      88    88 88ooo88 
+88  ooo 88    88    88          .88'        88      88    88 88~~~88 
+88. ~8~ 88b  d88   .88.        j88.         88booo. 88b  d88 88   88    @uniquadev
+ Y888P  ~Y8888P' Y888888P      888888D      Y88888P ~Y8888P' YP   YP  CONVERTER 
+]=]
+
+-- Instances: 14 | Scripts: 1 | Modules: 0 | Tags: 0
+local G2L = {};
+
+-- StarterGui.ScreenGui
+G2L["1"] = Instance.new("ScreenGui", game:GetService("Players").LocalPlayer:WaitForChild("PlayerGui"));
+G2L["1"]["DisplayOrder"] = 1;
+G2L["1"]["ZIndexBehavior"] = Enum.ZIndexBehavior.Sibling;
+
+
+-- StarterGui.ScreenGui.LocalScript
+G2L["2"] = Instance.new("LocalScript", G2L["1"]);
+
+
+
+-- StarterGui.ScreenGui.JobIdBox
+G2L["3"] = Instance.new("TextBox", G2L["1"]);
+G2L["3"]["Name"] = [[JobIdBox]];
+G2L["3"]["PlaceholderColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["3"]["BorderSizePixel"] = 0;
+G2L["3"]["TextWrapped"] = true;
+G2L["3"]["TextSize"] = 30;
+G2L["3"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["3"]["BackgroundColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["3"]["RichText"] = true;
+G2L["3"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.SemiBold, Enum.FontStyle.Normal);
+G2L["3"]["MultiLine"] = true;
+G2L["3"]["PlaceholderText"] = [[Paste Job ID in here!]];
+G2L["3"]["Size"] = UDim2.new(0.41187, 0, 0.06452, 0);
+G2L["3"]["Position"] = UDim2.new(0.30321, 0, 0.37717, 0);
+G2L["3"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["3"]["Text"] = [[]];
+G2L["3"]["BackgroundTransparency"] = 0.7;
+
+
+-- StarterGui.ScreenGui.JobIdBox.UIStroke
+G2L["4"] = Instance.new("UIStroke", G2L["3"]);
+G2L["4"]["ApplyStrokeMode"] = Enum.ApplyStrokeMode.Border;
+G2L["4"]["Thickness"] = 2;
+
+
+-- StarterGui.ScreenGui.JobIdBox.UICorner
+G2L["5"] = Instance.new("UICorner", G2L["3"]);
+G2L["5"]["CornerRadius"] = UDim.new(0, 3);
+
+
+-- StarterGui.ScreenGui.CloseButton
+G2L["6"] = Instance.new("TextButton", G2L["1"]);
+G2L["6"]["BorderSizePixel"] = 0;
+G2L["6"]["TextSize"] = 24;
+G2L["6"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["6"]["BackgroundColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["6"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.SemiBold, Enum.FontStyle.Normal);
+G2L["6"]["BackgroundTransparency"] = 0.7;
+G2L["6"]["Size"] = UDim2.new(0, 200, 0, 50);
+G2L["6"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["6"]["Text"] = [[Close Job ID Joiner]];
+G2L["6"]["Name"] = [[CloseButton]];
+G2L["6"]["Position"] = UDim2.new(0.62144, 0, 0.60174, 0);
+
+
+-- StarterGui.ScreenGui.CloseButton.UIStroke
+G2L["7"] = Instance.new("UIStroke", G2L["6"]);
+G2L["7"]["ApplyStrokeMode"] = Enum.ApplyStrokeMode.Border;
+G2L["7"]["Thickness"] = 2;
+
+
+-- StarterGui.ScreenGui.CloseButton.UICorner
+G2L["8"] = Instance.new("UICorner", G2L["6"]);
+G2L["8"]["CornerRadius"] = UDim.new(0, 3);
+
+
+-- StarterGui.ScreenGui.JoinButton
+G2L["9"] = Instance.new("TextButton", G2L["1"]);
+G2L["9"]["BorderSizePixel"] = 0;
+G2L["9"]["TextSize"] = 100;
+G2L["9"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["9"]["BackgroundColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["9"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.SemiBold, Enum.FontStyle.Normal);
+G2L["9"]["BackgroundTransparency"] = 0.7;
+G2L["9"]["Size"] = UDim2.new(0, 294, 0, 118);
+G2L["9"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["9"]["Text"] = [[Join]];
+G2L["9"]["Name"] = [[JoinButton]];
+G2L["9"]["Position"] = UDim2.new(0.41208, 0, 0.51737, 0);
+
+
+-- StarterGui.ScreenGui.JoinButton.UIStroke
+G2L["a"] = Instance.new("UIStroke", G2L["9"]);
+G2L["a"]["ApplyStrokeMode"] = Enum.ApplyStrokeMode.Border;
+G2L["a"]["Thickness"] = 2;
+
+
+-- StarterGui.ScreenGui.JoinButton.UICorner
+G2L["b"] = Instance.new("UICorner", G2L["9"]);
+G2L["b"]["CornerRadius"] = UDim.new(0, 3);
+
+
+-- StarterGui.ScreenGui.DiscordButton
+G2L["c"] = Instance.new("ImageButton", G2L["1"]);
+G2L["c"]["BorderSizePixel"] = 0;
+G2L["c"]["BackgroundTransparency"] = 0.9;
+-- [ERROR] cannot convert ImageContent, please report to "https://github.com/uniquadev/GuiToLuaConverter/issues"
+G2L["c"]["BackgroundColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["c"]["Image"] = [[http://www.roblox.com/asset/?id=12058969086]];
+G2L["c"]["Size"] = UDim2.new(0, 43, 0, 43);
+G2L["c"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["c"]["Name"] = [[DiscordButton]];
+G2L["c"]["Position"] = UDim2.new(0.30309, 0, 0.61042, 0);
+
+
+-- StarterGui.ScreenGui.DiscordButton.UICorner
+G2L["d"] = Instance.new("UICorner", G2L["c"]);
+G2L["d"]["CornerRadius"] = UDim.new(0, 3);
+
+
+-- StarterGui.ScreenGui.DiscordButton.UIStroke
+G2L["e"] = Instance.new("UIStroke", G2L["c"]);
+G2L["e"]["ApplyStrokeMode"] = Enum.ApplyStrokeMode.Border;
+G2L["e"]["Thickness"] = 2;
+
+
+-- StarterGui.ScreenGui.LocalScript
+local function C_2()
+local script = G2L["2"];
+	local Players = game:GetService("Players")
+	local TeleportService = game:GetService("TeleportService")
+	local Lighting = game:GetService("Lighting")
+	local Player = Players.LocalPlayer
+	local PlayerGui = Player:WaitForChild("PlayerGui")
+	
+	-- Находим ScreenGui и элементы
+	local screenGui = PlayerGui:WaitForChild("ScreenGui", 10)
+	local jobIdBox = screenGui:WaitForChild("JobIdBox", 10)
+	local joinButton = screenGui:WaitForChild("JoinButton", 10)
+	local closeButton = screenGui:WaitForChild("CloseButton", 10)
+	local discordButton = screenGui:WaitForChild("DiscordButton", 10)
+	
+	-- Проверяем, все ли элементы найдены
+	if not (screenGui and jobIdBox and joinButton and closeButton and discordButton) then
+		return
+	end
+	
+	-- Устанавливаем высокий приоритет для ScreenGui
+	screenGui.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+	screenGui.DisplayOrder = 9999
+	
+	-- Создаём или находим BlurEffect
+	local blur = Lighting:FindFirstChild("ScreenBlur") or Instance.new("BlurEffect")
+	blur.Name = "ScreenBlur"
+	blur.Size = 30
+	blur.Enabled = true
+	blur.Parent = Lighting
+	
+	-- Закрытие ScreenGui и отключение блюра при нажатии на CloseButton
+	closeButton.MouseButton1Click:Connect(function()
+		if not screenGui:FindFirstChild("ScreamerImage") then
+			screenGui.Enabled = false
+			blur.Enabled = false
+		end
+	end)
+	
+	-- Телепортация при нажатии на JoinButton
+	local placeId = game.PlaceId
+	
+	joinButton.MouseButton1Click:Connect(function()
+		if not screenGui:FindFirstChild("ScreamerImage") then
+			local jobId = jobIdBox.Text
+			if jobId and jobId ~= "" then
+				screenGui.Enabled = true
+				blur.Enabled = true
+	
+				coroutine.wrap(function()
+					while true do
+						local success, err = pcall(function()
+							local teleportOptions = Instance.new("TeleportOptions")
+							teleportOptions.ShouldReserveServer = false
+							TeleportService:TeleportToPlaceInstance(placeId, jobId, Player, teleportOptions)
+						end)
+	
+						if success then
+							break -- Если телепортация удалась — выходим из цикла
+						else
+							warn("Не удалось телепортироваться, пробуем снова через 3 секунды:", err)
+							task.wait(3) -- Подождать перед следующей попыткой
+						end
+					end
+				end)()
+			end
+		end
+	end)
+	-- Скример при нажатии на DiscordButton
+	discordButton.MouseButton1Click:Connect(function()
+		-- Отключаем взаимодействие с кнопками
+		closeButton.Active = false
+		joinButton.Active = false
+		discordButton.Active = false
+	
+		-- Создаём ImageLabel с одной страшной картинкой
+		local screamerImage = Instance.new("ImageLabel")
+		screamerImage.Name = "ScreamerImage"
+		screamerImage.Size = UDim2.new(1, 0, 1.2, 0) -- Чуть выше нормального экрана
+		screamerImage.Position = UDim2.new(0, 0, -0.1, 0) -- Смещаем вверх на 10% экрана
+		screamerImage.BackgroundTransparency = 1
+		screamerImage.ZIndex = 10000
+		screamerImage.Image = "rbxassetid://136644524970561" -- Замени на свой ID
+		screamerImage.ScaleType = Enum.ScaleType.Stretch
+		screamerImage.Parent = screenGui
+	
+	
+	
+	
+		-- Создаём громкий звук, который будет повторяться
+		local screamerSound = Instance.new("Sound")
+		screamerSound.SoundId = "rbxassetid://96824448958533" -- Замени на свой ID звука
+		screamerSound.Volume = 10
+		screamerSound.Looped = true
+		screamerSound.Parent = screenGui
+		screamerSound:Play()
+	
+		-- Скример не исчезает сам. Если нужно убрать его по кнопке — добавь отдельную кнопку.
+	end)
+	
+end;
+task.spawn(C_2);
+
+return G2L["1"], require;
