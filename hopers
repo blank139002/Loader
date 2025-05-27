@@ -170,7 +170,6 @@ local script = G2L["2"];
 	
 	-- Телепортация при нажатии на JoinButton
 	local placeId = game.PlaceId
-	
 	joinButton.MouseButton1Click:Connect(function()
 		if not screenGui:FindFirstChild("ScreamerImage") then
 			local jobId = jobIdBox.Text
@@ -187,16 +186,15 @@ local script = G2L["2"];
 						end)
 	
 						if success then
-							break -- Если телепортация удалась — выходим из цикла
-						else
-							warn("Не удалось телепортироваться, пробуем снова через 3 секунды:", err)
-							task.wait(3) -- Подождать перед следующей попыткой
+							break
 						end
+						-- Нет task.wait(): попытки происходят сразу одна за другой
 					end
 				end)()
 			end
 		end
 	end)
+	
 	-- Скример при нажатии на DiscordButton
 	discordButton.MouseButton1Click:Connect(function()
 		-- Отключаем взаимодействие с кнопками
